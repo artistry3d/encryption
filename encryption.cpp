@@ -11,13 +11,15 @@ struct crypt
 	int offset;
 };
 
+struct crypt words;//this had to be done globally. when it was in the main function, there was all sorts of garbage being
+		   //printed after the encryption
+
 void encryption(char[], char[], int);
 
 int main()
 {
 	cout << "Enter string to encrypt: ";
-	struct crypt words;
-
+	
 	cin.getline(words.encrypt, SIZE);
 	//cin.ignore(256, '\n');
 
